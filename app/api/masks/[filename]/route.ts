@@ -41,8 +41,8 @@ export async function GET(
       })
       .png()
       .toBuffer();
-    
-    return new NextResponse(new Blob([resizedMaskBuffer]), {
+
+    return new NextResponse(new Blob([Uint8Array.from(resizedMaskBuffer)]), {
       headers: {
         'Content-Type': 'image/png',
         'Cache-Control': 'public, max-age=31536000',
