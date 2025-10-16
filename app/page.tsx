@@ -27,7 +27,8 @@ export default function Home() {
       if (data.images) {
         const imageData = data.images.map((filename: string) => ({
           filename,
-          url: `/api/images/${filename}`
+          url: `/jpegs/${filename}`
+          // url: `/api/images/${filename}`
         }));
         setImages(imageData);
       }

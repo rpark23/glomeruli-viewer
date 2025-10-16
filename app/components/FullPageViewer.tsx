@@ -80,7 +80,10 @@ export default function FullPageViewer({
     const parts = nameWithoutExt.split('_');
     
     if (parts.length >= 7) {
-      const stain = parts[0]; // HE or PAS
+      let stain = parts[0]; // HE or PAS
+      if (stain === 'HE') {
+        stain = "H&E";
+      }
       const slideNumber = parts[4]; // The number after S (parts[4])
       const roiNumber = parts[6]; // The number after ROI (parts[6])
       
