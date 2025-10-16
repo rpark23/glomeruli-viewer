@@ -1,7 +1,7 @@
 {
   "/_not-found": "app/_not-found.js",
-  "/api/masks/[filename]/route": "app/api/masks/[filename]/route.js",
   "/api/images/[filename]/route": "app/api/images/[filename]/route.js",
   "/page": "app/page.js",
-  "/api/images/route": "app/api/images/route.js"
+  "/api/images/route": "app/api/images/route.js",
+  "/api/masks/[filename]/route": "app/api/masks/[filename]/route.js"
 }

@@ -13,8 +13,8 @@ export async function GET(
     const maskFilename = jpgFilename.replace('.jpg', '_mask.png');
     
     // Paths for both JPEG and mask images
-    const jpegPath = path.join(process.cwd(), '..', 'dataset_web_jpeg', jpgFilename);
-    const maskPath = path.join(process.cwd(), '..', 'dataset', maskFilename);
+    const jpegPath = path.join(process.cwd(), 'public', 'jpegs', jpgFilename);
+    const maskPath = path.join(process.cwd(), 'public', 'masks', maskFilename);
     
     if (!fs.existsSync(maskPath)) {
       return NextResponse.json({ error: 'Mask not found' }, { status: 404 });

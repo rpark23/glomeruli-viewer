@@ -4,7 +4,8 @@ import path from 'path';
 
 export async function GET(request: NextRequest) {
   try {
-    const datasetPath = path.join(process.cwd(), '..', 'dataset_web_jpeg');
+    // const datasetPath = path.join(process.cwd(), '..', 'dataset_web_jpeg');
+    const datasetPath = path.join(process.cwd(), 'public', 'jpegs')
     const files = fs.readdirSync(datasetPath).filter(file => file.endsWith('.jpg'));
     
     return NextResponse.json({ images: files });
