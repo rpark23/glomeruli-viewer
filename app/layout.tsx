@@ -5,9 +5,10 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Glomeruli Dataset Viewer',
-  description: 'View and analyze glomeruli images with mask overlay functionality',
-}
+  title: "Glomeruli Dataset Viewer",
+  description: "View and analyze glomeruli ROIs with mask overlay functionality",
+  icons: '/favicon.ico',
+};
 
 export default function RootLayout({
   children,

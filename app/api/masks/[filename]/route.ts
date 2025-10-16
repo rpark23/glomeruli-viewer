@@ -42,7 +42,7 @@ export async function GET(
       .png()
       .toBuffer();
     
-    return new NextResponse(resizedMaskBuffer, {
+    return new NextResponse(new Blob([resizedMaskBuffer]), {
       headers: {
         'Content-Type': 'image/png',
         'Cache-Control': 'public, max-age=31536000',
